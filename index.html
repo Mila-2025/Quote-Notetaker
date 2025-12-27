@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quote Notetaker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body class="bg-stone-100 min-h-screen flex items-center justify-center text-stone-800">
+<!-- bg-stone-100 → светло-серый фон
+min-h-screen → высота на весь экран
+flex → включаем flexbox
+items-center → центр по вертикали
+justify-center → центр по горизонтали
+text-stone-800 → цвет текста -->
+
+  <div class="bg-white w-full max-w-md p-8 rounded-2xl shadow-sm">
+    <!-- bg-white → белый фон
+w-full → ширина 100%
+max-w-md → но не больше среднего размера
+p-8 → внутренние отступы
+rounded-2xl → скруглённые углы
+shadow-sm → лёгкая тень -->
+
+    <h1 class="text-2xl font-light mb-6 text-center tracking-wide">
+      Quote Notetaker
+    </h1>
+    <!-- text-2xl → крупный текст
+font-light → тонкий шрифт
+mb-6 → отступ снизу
+text-center → по центру
+tracking-wide → чуть больше расстояние между буквами -->
+
+<!-- 👉 Поле, куда пишут цитату id="quote-input" -->
+    <input
+      id="quote-input"
+      type="text"
+      placeholder="Write a quote"
+      class="w-full border border-stone-300 rounded-lg px-4 py-2 mb-3 focus:outline-none focus:ring-1 focus:ring-stone-400"
+    >
+
+    <!-- 👉 Абсолютно то же самое, но для автора id="quote-input" -->
+    <input
+      id="author-input"
+      type="text"
+      placeholder="Author"
+      class="w-full border border-stone-300 rounded-lg px-4 py-2 mb-4 focus:outline-none focus:ring-1 focus:ring-stone-400"
+    >
+
+    <!-- 👉 Кнопка, на которую нажимают, чтобы добавить цитату. -->
+    <button
+      id="add-quote"
+      class="w-full bg-stone-800 text-white py-2 rounded-lg hover:bg-stone-700 transition">
+      Add quote
+    </button>
+    <!-- bg-stone-800 → тёмная
+text-white → белый текст
+hover:bg-stone-700 → светлее при наведении
+transition → плавно -->
+
+<!-- 👉 Список, куда JS будет добавлять цитаты. -->
+    <ul id="quotes-list" class="mt-6 space-y-4"></ul>
+    <!-- 👉 Закрыли карточку </div> -->
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
